@@ -1,0 +1,1818 @@
+/****Color Azul***/
+@color-principal: #6dbd63;
+@color-texto: #636363;
+@color-secundario: #8A8A8A;
+@color-tienda-one: #f58989;
+@color-tienda-two: #f36c6d;
+
+@tienda_std_innovacion: #c476ca;
+@tienda_std_nuevo: #0099cc;
+@tienda_std_oferta: #e65a4b;
+@tienda_std_masvendido: #feaa37;
+
+@color-principal-hover: darken(@color-principal, 10%);
+@color-terciario: lighten(@color-principal, 10%);
+@color-footer: #666666;
+
+@font-face {
+    font-family: 'weblysleek_uilight';
+    src: url('../fonts/weblysleekuil-webfont.eot');
+    src: url('../fonts/weblysleekuil-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/weblysleekuil-webfont.woff2') format('woff2'),
+         url('../fonts/weblysleekuil-webfont.woff') format('woff'),
+         url('../fonts/weblysleekuil-webfont.ttf') format('truetype'),
+         url('../fonts/weblysleekuil-webfont.svg#weblysleek_uilight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'weblysleek_uisemilight';
+    src: url('../fonts/weblysleekuisl-webfont.eot');
+    src: url('../fonts/weblysleekuisl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/weblysleekuisl-webfont.woff2') format('woff2'),
+         url('../fonts/weblysleekuisl-webfont.woff') format('woff'),
+         url('../fonts/weblysleekuisl-webfont.ttf') format('truetype'),
+         url('../fonts/weblysleekuisl-webfont.svg#weblysleek_uisemilight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {padding-bottom: 0 !important; font-size: 1.6em; font-family: 'weblysleek_uisemilight';}
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+}
+
+
+/**Menu**/
+.navbar{
+  padding: 15px 0;
+  z-index: 888;
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.content-header{
+  margin: 1px auto 0px;
+  position: relative;
+}
+.logo{
+  position: absolute;
+  text-align: left;
+  top: 12px;
+  z-index: 1031;
+}
+
+@media(min-width: 992px){
+  .logo-lg{
+    display: block;
+    position: absolute;
+    z-index: 1000;
+  }
+}
+.navbar-nav li{
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin: 0 2px;
+}
+#navbar ul li a{
+  text-decoration: none; 
+}
+#navbar ul li a:hover,
+#navbar ul li a:focus{
+  color: @color-principal; 
+  text-decoration: none;
+}
+#navbar ul li.active a{
+  color: @color-principal;
+  background: #FFFFFF;
+}
+
+.navbar-nav{
+  float: right;
+  font-weight: bold;
+}
+.block-title,
+.page-header{
+  color: @color-principal;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+.page-header{
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  background: #FFF;
+}
+.block-title{
+  font-size: 3.5rem;
+}
+.navbar-inverse{
+  background-color: #FFF;
+  color: @color-principal-hover;
+  border: 0px;
+  .container{
+    padding: 0;
+    .navbar-collapse{
+      padding: 0;
+    }
+  }
+}
+.navbar-fixed-top {
+  position: inherit;
+}
+.navbar{
+  margin-bottom: 0px;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color: #707070;
+}
+/*.nav>li>a {
+  padding: 35px 12px 35px 12px;
+}*/
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,    
+.navbar-inverse .navbar-nav > .active > a:focus { 
+  color: #fff;
+  background: @color-principal;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: @color-principal-hover;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: @color-principal-hover;
+}
+.navbar-toggle{
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.active-trail{
+  background-color: @color-principal;
+  color: #FFF !important;
+}
+
+.tienda .active-trail{
+  background-color: @color-tienda-two;
+  color: #FFF !important;
+}
+.logo-fixed{
+  display: none;
+  top: -5px;
+  position: absolute;
+  width: 220px;
+  z-index: 20;
+}
+.navbar .relative{
+  display: initial;
+}
+.container{
+  .navbar-header{
+    margin-bottom: 20px;
+  }
+}
+.space-header{
+  display: none;
+}
+@media (max-width: 992px) {
+  .navbar-nav li{
+    font-size: 1.4rem;
+  }
+  .nav>li>a{
+    padding: 15px 3px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-nav{
+    float: right;
+  }
+  .navbar-inverse{
+    .container{
+      padding: 0 15px;
+      .navbar-collapse{
+        padding: 0 15px;
+      }
+    }
+  }
+  .bg-top{
+    display: none;
+  }
+  .content-header{
+    margin: 0px auto 0px;  
+  }
+  .nav>li>a{
+    padding: 10px 10px;
+  }
+  .container{
+    .navbar-header{
+      margin-bottom: 0px;
+    }
+  }
+  .logo-fixed{
+    display: block;
+    top: 10px;
+  }
+  .logo{
+    display: none;
+  }
+  .navbar-toggle{
+    margin-right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar .relative{
+    display: inherit;
+  }
+  .navbar-nav {
+    float: none;
+  }
+  .navbar-nav li{
+    display: block;
+    float: none;
+  }
+  .space-header{
+    height: 58px;
+    width: 100%;
+    display: table;
+  }
+}
+/**Fin Menu**/
+/***Menu fijo***/
+@media (max-width: 768px) {
+  header{
+    background: #FFF;
+    position: fixed;
+    width: 100%;
+    display: table;
+    z-index: 200;
+    border-bottom: 1px @color-principal solid;
+  }  
+  .content-relativo{
+    position: relative;
+  }
+  .logo-center{
+    height: 120px
+  }
+  .navbar-inverse .navbar-toggle{
+    background: @color-principal;
+  }
+  .cont-header{
+    margin: 45px auto 10px;
+  }
+  .navbar-inverse .navbar-collapse{
+    border-color: @color-principal;
+  }
+  .bg_gris .m_total .col-xs-12{
+    padding: 0 24%;
+    width: auto;
+  }
+}
+/*****/
+/*****STYLE SLIDER*****/
+.box-container-slider{
+  position: relative;
+}
+.group-content-slider{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #FFF;
+  /*background: rgba(18, 18, 18 ,.8);*/
+  background: rgba(22, 22, 22, 0.52);
+  display: table;
+  text-align: left;
+  z-index: 1;
+}
+  .bg-content-slider{
+    padding: 20px ;
+    /*transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);*/
+  }
+.img-content-slider{
+  position: absolute;
+  top: -170px;
+  right: -20px;
+  
+  z-index: 0;
+}
+.img-slider{
+  position: relative;
+  right: 0;
+  top: 50%;
+}
+.title-slider{
+  color: @color-principal;
+  font-size: 3rem;
+  margin-top: 0px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  font-family: sans-serif;
+}
+.content-slider{
+  color: #FFF;
+  width: 80%;
+  float: left;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+.link-slider{
+  background: @color-principal;
+  padding: 6px 20px;
+  float: right;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  border: 0px;
+  border-radius: 0px;
+    &:hover{
+      background: @color-principal-hover;
+      color: #FFF;
+      text-decoration: none;
+    }
+ }
+.owl-theme .owl-controls .owl-page span{
+  background: @color-principal;
+}
+.owl-buttons{ 
+  top: 35%; 
+  position: absolute;
+  width: 100%;
+}
+.owl-buttons div{ 
+  opacity: 0.9;
+}
+.owl-next{
+  right: 30px;
+  border-radius: 0px  !important;
+  position: absolute;
+  background: url("../img/arrow-next.png") no-repeat !important;
+  text-indent: -9999px;
+  padding: 10px 15px !important;
+}
+.owl-prev{
+  left: 30px;
+  border-radius: 0px !important;
+  position: absolute;
+  background: url("../img/arrow-prev.png") no-repeat !important;
+  text-indent: -9999px;
+  padding: 10px 15px !important;
+}
+
+@media (max-width: 993px) {
+  .content-slider{
+    font-size: 1.6rem;
+    line-height: normal;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-slider{
+    font-size: 1.6rem;
+    padding: 7px 10px;
+    &:hover{
+    }
+  }
+  .title-slider{
+    font-size: 2rem;
+  }
+  .content-slider{
+    font-size: 1.5rem;
+  }
+  .img-content-slider{
+    display: none;
+  }
+  .intimedia-home-destacado-t1{
+    border-top: 0 !important;
+  }
+}
+@media (max-width: 480px) {
+  .title-slider{
+    display: none;
+  }
+  .content-slider{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .link-slider{
+    float: none;
+    margin: 0 auto;
+    display: table;
+  }
+}
+
+@media (max-width: 992px) {
+  .faybe-home-servicios-lista-grilla-t1 .img-lista-grilla img{
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .faybe-home-servicios-lista-grilla-t1 .img-lista-grilla img{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .faybe-home-servicios-lista-grilla-t1 .img-lista-grilla img{
+    width: auto;
+  }
+}
+@media (max-width: 350px) {
+  .faybe-home-servicios-lista-grilla-t1 .img-lista-grilla img{
+    width: 100%;
+  }
+}
+@media (min-width: 1600px) {
+  .pera-home-destacado-t1 img{
+    width: 100%;
+  }
+}
+.intimedia-home-destacado-t1{
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  /*img{
+    max-width: 100%;
+  }*/
+}/*
+.intimedia-home-destacado-t1:before{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #e5e5e5;
+  bottom: -1px;
+  z-index: -1;
+}*/
+/** Fin slider**/
+
+#home_servicio{
+  margin: 50px auto;
+}
+.main-container{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+@media (max-width: 992px){
+  .logo{
+    /*top: -20px;*/
+    display: none;
+  }
+  .logo-fixed{
+    display: block;
+    top: 7px;
+  }
+}
+.node-page{
+  .content{
+    .field-items{
+      .field-item strong{
+        color: @color-principal !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .contact-form{
+    margin-top: 0px !important;
+  }
+  .form-group{
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 768px){
+  .node-page,
+  .node-servicio{
+    .content{
+      .field-items{
+        .field-item img{
+          float: none !important;
+          margin: 0 auto 20px !important;
+          display: table !important;
+        }
+      }
+    }
+  }
+  .node-servicio{
+    .content{
+      ul{
+        float: none !important;
+      }
+    }
+  }
+}
+@media (max-width: 380px){
+  .node-servicio{
+    .content{
+      .field-items{
+        .field-item img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 440px){
+  .node-page{
+    .content{
+      .field-items{
+        .field-item img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/**seccion Home servicios**/
+.bg_gris{
+  background: #f0f0f0;
+}
+.faybe-home-servicios-lista-grilla-t1{
+  display: table;
+  margin: 30px auto;
+  .box-lista-grilla{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .img-lista-grilla{
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    img{
+      padding: 4px;
+      border: 1px solid @color-principal;
+      margin: 0 auto;
+    }
+  }
+  .titulo-lista-grilla{
+    font-size: 2.2rem;
+    a{
+      color: @color-principal;
+      &:hover{
+        color: @color-principal-hover;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.link-destacado-slider{
+  display: table;
+  a{
+    display: table;
+    background: @color-secundario;
+    padding: 12px 35px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+    &:hover{
+      text-decoration: none;
+      color: #FFF;
+      background: @color-principal;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .faybe-home-servicios-lista-grilla-t1{
+    margin-bottom: 20px;
+    .box-lista-grilla{
+      border-bottom: 1px dotted @color-principal;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
+.link-ver-todo{
+  display: table;
+  text-transform: uppercase;
+  margin: 20px auto 0;
+  background: @color-principal;
+  color: #FFF;
+  text-decoration: none;
+  padding: 5px 25px;
+  &:hover,
+  &:focus{
+    background: @color-principal-hover;
+    text-decoration: none;
+    color: #FFF;
+  }
+}
+/** Fin seccion home servicios**/
+/** Footer **/
+footer#footer{
+  border-top: 1px solid #393939;
+  /*background: #404040;*/
+  background: #4c3e4d;
+  color: #FFF;
+  width: 100%;
+  display: table;
+  padding: 30px 0 0px 0;
+  .region-footer-superior-izquierdo,
+  .region-footer-superior-centro,
+  .region-footer-superior-derecho{
+    .block-title{
+      font-size: 1.5rem;
+      text-align: center;
+      color: #FFF;
+      text-transform: none;
+      border: none;
+    }
+  }
+
+  .footer_columna_uno{
+    border-right: solid 1px #FFFFFF;
+  }
+
+  .region-footer-superior-izquierdo{
+    ul.lista-redes-footer{
+      padding: 0;
+      li a span{
+        font-size: 3rem;
+      }
+      li a:hover{
+        text-decoration:none;
+      }
+      li a:hover span{
+        color: @color-principal;
+        text-decoration: none;
+      }
+    }
+  }
+  .region-footer-superior-centro,
+  .region-footer-superior-derecho{
+    .view-content{
+      text-align: left; 
+    }
+  }
+  .footer-inferior{
+    /*background: #262626;*/
+    background: #1F191F;
+    padding: 15px 0 15px 0;
+    margin-top: 30px;
+    .region-footer-copyright{
+      text-align: center;
+    }
+  }
+  .lista-redes-footer{
+    /*float: left;*/
+    top:18px;
+    margin: 0;
+    padding-left: 0px;
+  }
+  .lista-redes-footer li{
+    margin: 5px;
+    display: inline-block;
+  }
+  .lista-redes-footer li a span{
+    color: #FFF; 
+    font-size: 2rem;
+    &:hover{
+      color: @color-principal;
+    }
+  }
+}
+.seccion-footer-t1{
+  margin: 40px auto 0;
+  .box-dato-foot{
+    padding: 30px 50px;
+    }
+  .box-dato-foot h4{
+    margin-top: 0;
+    span{
+      font-size: 2.5rem;
+    }
+  }
+  .box-dato-foot,
+  .box-dato-foot-center{
+    margin-bottom: 40px;
+  }
+  .box-dato-foot a:hover{
+    color: #FFF;
+  }
+  .box-dato-foot-center{
+    margin-top: 20px auto;
+    text-align: center;
+    span{
+      font-size: 2.5rem;
+    }
+  }
+  .box-dato-foot{
+    padding: 0px 40px;
+   }
+}
+.bor_top{
+  border-top: 1px solid @color-principal;
+  padding: 20px 0 20px;
+  text-align: center;
+}
+.list_menu_foot{
+  display: table;
+  width: 100%;
+  padding: 0px 40px;
+  li{
+    list-style: none;
+    display: table;
+    width: 100%;
+    a{
+      position: relative;
+      border-bottom: 1px solid @color-principal;
+      color: @color-principal;
+      text-decoration: none;
+      width: 100%;
+      display: table;
+      padding: 5px 10px;
+      text-align: left;
+      &:hover{
+        border-bottom: 1px solid #FFF;
+        color: #FFF;
+      }
+      span{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .list_menu_foot{
+    padding: 0 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  footer#footer{
+    .region-footer-superior-izquierdo,
+    .region-footer-superior-centro,
+    .region-footer-superior-derecho{
+      margin-bottom: 25px;
+      .block-title{
+        text-align: center;
+      }
+    }
+    .lista-redes-footer{
+      float: none;
+    }
+    .region-footer-superior-centro, 
+    .region-footer-superior-derecho{
+      .view-content{
+        text-align: center;
+      }
+    }
+  }
+}
+
+.region-footer-superior-derecho .google_map_field_display{
+  width: 100%;
+  max-height: 223px;
+}
+/** Fin Footer **/
+.titulo{
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid @color-principal;
+}
+
+/***NOSOTROS***/
+.intimedia-nosotros-lista-grilla-t1{
+  margin: 0px auto 50px;
+  .view-header{
+    img{
+      border: 1px solid #e2e2e2 !important;
+      padding: 5px;
+    }
+  }
+  .col{
+    margin-top: 30px;
+  }
+  .box-lista-grilla{
+    width: 100%;
+    text-align: center;
+    a{
+      display: table;
+      width: 100%;
+      padding: 30px;
+      border: 1px dotted #878787;
+      text-decoration: none;
+      &:hover{
+        border: 1px dotted @color-principal;
+        background: #ebebeb;
+        text-decoration: none;
+      }
+    }
+    h2.nombre-lista-grilla{
+      font-size: 1.8rem;
+      color: @color-principal;
+    }
+    .cargo-lista-grilla{
+      font-size: 1.8rem;
+      color: #646464;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .intimedia-nosotros-lista-grilla-t1{
+    .img-lista-grilla img{
+      margin: 0 auto;
+    }
+  }
+}
+/***FIN NOSOTROS***/
+/***centrar contenido***/
+.row-centered{
+  text-align: center;
+}
+.col-centered{
+  vertical-align: top;
+  display: inline-block;
+  float: none;
+  margin-right:-4px;
+}
+/***CLIENTES***/
+.intimedia-portafolio-lista-grilla-t1{
+  margin: 0px auto 40px;
+  .box-lista-grilla{
+    width: 100%;
+    border: 1px dotted #878787;
+    padding: 5px;
+  }
+  .col{
+    margin-top: 30px;
+  }
+  .box-lista-grilla a{
+    color: @color-secundario;
+
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+    .nombre-lista-grilla{
+      font-size: 2.2rem;
+    }
+  }
+  .title-group{
+    color: #838383;
+    border-bottom: 1px dotted #838383;
+    padding-bottom: 5px;
+  }
+  .box-lista-grilla a.img-enlace-lista-grilla .vermas-zoom-lista-grilla{
+      display: none;
+  }
+  .box-lista-grilla a.img-enlace-lista-grilla:hover .vermas-zoom-lista-grilla{
+      display: block;
+      position: absolute;
+      display:block;
+      overflow: hidden;
+      background: rgba(0,0,0, .6);
+      color: #FFF;
+      width: 100%;
+      height: 100%;
+  }
+  .box-lista-grilla a.img-enlace-lista-grilla {
+      position: relative;
+      display: table;
+      width: 100%;
+  }
+  .img-enlace-lista-grilla img{
+    margin: 0 auto;
+    width: 100%;
+  }/*
+  .box-lista-grilla a.img-enlace-lista-grilla .vermas-zoom-lista-grilla span{
+      position:absolute;
+      font-size: 60px !important;
+      top: 50%;
+      left: 50%;
+      font-size: 100px;
+      color: #FFF;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%); 
+  }*/
+  .box-lista-grilla a.img-enlace-lista-grilla .vermas-zoom-lista-grilla .nombre-lista-grilla{
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      color: #FFF;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%); 
+  }
+}
+@media (max-width: 767px) {
+  .col-centered{
+    margin-right:0px;
+  }
+  .intimedia-portafolio-lista-grilla-t1{
+    .row-centered{
+      margin: 0 20% !important;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .intimedia-portafolio-lista-grilla-t1{
+    .row-centered{
+      margin: 0 15% !important;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .intimedia-portafolio-lista-grilla-t1{
+    .row-centered{
+      margin: 0 10% !important;
+    }
+  }
+}
+
+@media (max-width: 405px){
+  .intimedia-portafolio-lista-grilla-t1{
+    .row-centered{
+      margin: 0 auto !important;
+    }
+  }
+}
+/***popup***/
+.titulo-equipo-2{
+  font-size: 2.8rem;
+  color: @color-principal-hover;
+  text-align: center;
+}
+.content-poput-equipo{
+  font-size: 1.6rem;
+  text-align: center;
+}
+.inline-popup img {
+    margin: 0 auto 20px;
+}
+.inline-popup{
+  .title-poput{
+    text-align: center;
+    font-size: 2.4rem;
+    color: @color-principal;
+  }
+  .subtitle-poput{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .poput-resumen{
+    text-align: justify;
+  }
+}
+.img-poput{
+  img{
+    padding: 5px;
+    border: 1px dotted #CCC;
+  }
+}
+.detalle-cv{ 
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #CCC;
+}
+a.link-linkedin{
+  display: table;
+  float: left;
+}
+a.link-linkedin span{
+  display: table;
+  float: left;
+  vertical-align: middle;
+  font-size: 4.5rem;
+  color: @color-principal;
+}
+.link-linkedin span:hover{
+  color: @color-principal-hover;
+}
+.file a,
+.file a:hover{
+  color: #FFF;
+  text-decoration: none;
+}
+.file{
+    display: table;
+    float: left;
+    background: @color-principal;
+    padding: 10px 10px;
+    color: #FFF;
+    margin-left: 10px;
+}
+.file:hover{
+    background: @color-principal-hover;
+}
+/***fin popup***/
+/***Contacto***/
+.google-map-field{
+  padding: 4px;
+  border: 1px solid #CCC;
+}
+.google_map_field_display{
+  width: 100%;
+  height: 300px;
+}
+.contact-informacion-telefono,
+.contact-informacion-email,
+.contact-informacion-direccion{
+  margin-bottom: 10px;
+  span{
+    color: @color-principal;
+  }
+}
+.form-group{
+  margin-top: 10px;
+}
+.form-control:focus{
+  /*border: #000 1px solid;*/
+  border: @color-principal 1px solid;
+  box-shadow: #000;
+}
+.btn-default,
+.btn-success{
+  border: 0px;
+  background: @color-principal;
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 12px 20px 12px 20px;
+  margin-top: 15px;
+  &:hover{
+    background: @color-principal-hover;
+    color: #FFF;
+  }
+  &:focus{
+    background: @color-principal-hover;
+    color: #FFF;
+  }
+}
+
+.region-content{
+  margin-bottom: 30px;
+}
+.contact-form{
+  margin: 20px auto
+}
+@media (max-width: 1200px) { 
+  .map-contact-line{
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px #CCC dashed;
+  }
+}
+/***Fin Contacto***/
+
+/***paginacion***/
+.pagination li a{
+  color: @color-principal;
+}
+.pagination>.active>a,
+.pagination>.active>a:hover{
+  color: #FFF;
+  background: @color-principal;
+  border: @color-principal;
+}
+.pagination>li>a:hover{
+  color: @color-principal-hover;
+}
+/***Fin paginacion***/
+/***FIN CLIENTES***/
+/****ESTILOS LISTA GRILLA CLEINTES TIPO 1****/
+.intimedia-clientes-lista-grilla-t1{
+  .box-cliente-lista-grilla{
+    margin-bottom: 20px;
+  }
+  .img-cliente-lista-grilla img{
+    margin: 0 auto;
+  }
+  .title-cliente-lista-grilla{
+    font-size: 1.8rem;
+    color: #5a5a5a;
+    padding-top: 10px;
+    margin-top: 0;
+  }
+ .box-cliente-lista-grilla a{
+    border: 1px solid #CCC;
+    display: table;
+    width: 100%;
+    text-align: center;
+    color: red;
+  }
+  .box-cliente-lista-grilla a:hover {
+    border: 1px solid @color-principal;
+    text-decoration: none;
+  }
+}
+/****FIN ESTILOS LISTA GRILLA CLEINTES TIPO 1****/
+
+
+/**LISTADO DE SERVICIOS**/
+.faybe-sevicios-lista-grilla-t1{
+  display: table;
+  margin: 30px auto;
+  .box-lista-grilla{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .img-lista-grilla{
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    img{
+      padding: 4px;
+      border: 1px solid @color-principal;
+      margin: 0 auto;
+    }
+  }
+  .titulo-lista-grilla{
+    font-size: 2.6rem;
+    a{
+      color: @color-principal;
+      &:hover{
+        color: @color-principal-hover;
+        text-decoration: none;
+      }
+    }
+  }
+  .btn-default, .btn-success{
+    display: grid;
+  }
+}
+/**FIN LISTADO SERVICIOS**/
+
+/****ESTILOS LISTA SIMPLE SERVICIOS TIPO 1****/
+.faybe-sevicios-ls-t1{
+  .lista-simple{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .item-lista-simple{
+      display: table;
+      width: 100%;
+      margin-bottom: 30px;
+      .img-lista-simple{
+        display: table;
+        margin-right: 20px;
+        float: left;
+        border: 1px solid @color-principal;
+        padding: 4px;
+      }
+      .content-lista-simple{
+        text-align: left;
+        padding: 0 15px 0;
+        .title-lista-simple{
+          font-size: 2.4rem;
+          margin-top: 0;
+          margin-bottom: 10px;
+          a{
+            color: @color-principal;
+            &:hover{
+              color: #444444;
+              text-decoration: none;
+            }
+          }
+        }
+        .title-lista-simple a:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .view-footer{
+    .titulo_otros_servicios{
+      color: @color-principal; 
+    }
+    ul{
+      padding: 0;
+      li{
+        list-style: none;
+        padding-left: 20px;
+        position: relative;
+      }
+      li:before{
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background: @color-principal;
+      }
+    }
+  }
+  
+  .resumen-lista-simple{
+      margin-bottom: 20px;
+      text-align: justify;
+      p{
+        margin-bottom: 5px;
+      }
+  }
+  .link-lista-simple{
+      background: #CCC;
+      padding: 10px 25px;
+      display: table;
+  }
+  .link-lista-simple:hover{
+      background: #f60;
+      color: #FFF;
+  }
+  .link-ver-todo{
+    margin: 0px; 
+  }
+  @media (max-width: 1200px) {
+      .bg-content-lista-simple{
+         height: 90%; 
+      }
+  }
+  @media (max-width: 992px) {
+      .img-lista-simple{
+          position: relative;
+      }
+      .bg-content-lista-simple{
+         height: 70%;
+         width: 100%;
+      }
+      .titulo-lista-simple{
+          margin-top: 0;
+      }
+      .content-lista-simple{
+          min-height: inherit;
+      }
+  }
+  @media (max-width: 768px) {
+      .img-lista-simple{
+          margin: 0 auto !important;
+          float: none !important;
+          margin-bottom: 20px !important;
+      }
+      .img-position{
+          position: relative;
+          float: none;
+          margin: 0 auto;
+      }
+      .link-lista-simple{
+          margin: 0 auto;
+      }
+      .content-lista-simple{
+          text-align: center;
+      }
+      .link-ver-todo{
+        margin: 0 auto; 
+      }
+      .lista-simple{
+        .item-lista-simple{
+          padding-bottom: 30px;
+          border-bottom: 1px dotted @color-principal;
+        }
+      }
+  }
+  @media (max-width: 380px) {
+    .lista-simple .item-lista-simple .img-lista-simple{
+      width: 100%;
+    }
+  }
+}
+.node-servicio{
+  .content{
+    ul{
+      padding: 0;
+      display: table;
+      li{
+        padding-left: 15px;
+        position: relative;
+        list-style: none;
+      }
+      li:before{
+        position: absolute;
+        left: 0;
+        top: 8px;
+        content: '';
+        width: 5px;
+        height: 5px;
+        background: @color-principal;
+
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .node-servicio{
+    .row{
+      .servicio-icon{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+/****FIN ESTILOS LISTA SIMPLE SERVICIOS TIPO 1****/
+.subtitulo-interno{
+  color: @color-principal;
+  border-bottom: 1px solid @color-principal;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  font-size: 2.4rem;
+}
+.region-content{
+  text-align: justify;
+}
+/****Volver****/
+.btn-interna-volver .icon-chevron-left{
+  font-size: 1.4rem;
+}
+.interna-content-volver{
+  text-align: right;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+.btn-interna-volver{  
+  color: @color-principal;
+}
+.btn-interna-volver:hover{
+  color: @color-principal;
+  text-decoration: underline;
+}
+/****Fin Volver****/
+@media (min-width: 1600px) {
+  .faybe-home-slider img{
+    width: 100% !important;
+    height: auto;
+    max-height: 690px;
+  }
+}
+
+/*.module-title {
+  text-align: center;
+    border: 0;
+    background: url(../img/linea.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    text-shadow: none;
+    box-shadow: none;
+    margin-bottom: 15px;
+    padding: 10px 30%;
+  }*/
+
+.group-lista-tienda{
+  section.col-sm-12{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+/**TIENDA LISTA GRILLA**/
+.faybe-tienda-lista-grilla{
+  text-align: center;
+  .tiendagroupbutton{
+    /*position: absolute;*/
+    /*background: #cccccc;*/
+    /*height: 92px;*/
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    /*padding: 23px 11px;*/
+    /*display: none;*/
+    .buttonbox{
+      /*margin-top: 27px;*/
+    }
+  }
+  .faybetiendacolumns{
+    /*cursor: pointer;*/
+  }
+  .col-lista-grilla{
+    margin-bottom: 25px;
+  }
+  .img-responsive{
+
+  }
+  .box-lista-grilla{
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    .titulo{
+      padding-top: 45px;
+      text-align: left;
+      text-transform: uppercase;
+      border-bottom: 0px solid #c476ca;
+      font-size: 13px;
+      text-align: center;
+      letter-spacing: 1px;
+      /*text-transform: capitalize;*/
+
+      a{
+        color: @color-principal;
+        font-size: 17px;
+      }
+    }
+
+    img{
+      margin: auto;
+      padding-bottom: 10px;
+    }
+
+    ul.links{
+      padding-left: 0px;
+      text-align: center;
+    }
+
+    ul.links li{
+      display: inline-block;
+    }
+
+    .form-type-fivestar{
+      color: @color-principal;
+      padding-bottom: 5px;
+      margin: auto;
+      display: table;
+
+    }
+
+    .fivestar-widget{
+      margin-top: 15px;
+    }
+  }
+
+
+  .estado-envoltura{
+    right: 5px;
+    position: absolute;
+    top: 9px;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .estado{
+    padding: 5px 9px 7px 11px;
+    border-radius: 14px;
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .estado-Oferta{
+    background-color: @tienda_std_oferta;
+  }
+
+  .estado-Nuevo{
+    background-color: @tienda_std_nuevo;
+  }
+
+  .estado-Innovaci贸n{
+    background-color: @tienda_std_innovacion;
+  }
+
+  .estado-M谩s-vendido{
+    background-color: @tienda_std_masvendido;
+  }
+
+  .titulo-Oferta a{
+    color: @tienda_std_oferta !important;
+  }
+
+  .titulo-Nuevo a{
+    color: @tienda_std_nuevo !important;
+  }
+
+  .titulo-Innovaci贸n a{
+    color: @tienda_std_innovacion !important;
+  }
+
+  .titulo-M谩s-vendido a{
+    color: @tienda_std_masvendido !important;
+  }
+
+  .btn{
+    border-radius: 0px;
+    padding: 9px 12px;
+    background: #ffffff;
+    border: 1px solid #666666;
+    color: #000;
+  }
+
+  .btn:hover{
+    background: #666666;
+    color: #fff;
+  }
+  .fivestar-widget-static{
+    text-align: center;
+  }
+
+  .group-precio{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .precio{
+      font-size: 23px;
+      font-weight: 1000;
+      color: red;
+      padding-left: 0px;
+      text-align: left;
+    }
+    .simbolo{
+      margin-top: -4px;
+      color: red;
+      font-weight: 1000;
+
+      padding-right: 0px;
+      text-align: right;
+    }
+    
+  }
+
+}
+
+/**FIN TIENDA LISTA GRILLA**/
+
+/**CATEGORIA**/
+#block-views-tienda-categoria-block{
+  border: 1px solid #CCC;
+  margin-bottom: 10px;
+  .block-title{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    background: #666666;
+    color: #fff;
+
+  }
+  .item-list ul{
+    padding-left: 0px;
+  }
+  .item-list ul li{
+    list-style: none;
+    /*background: url(../img/arrow.gif) no-repeat 12px 10px;*/
+    padding: 3px 0 3px 25px;
+    a{
+      color: @color-principal;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  
+}
+/**FIN CATEGORIA DE TIENDA**/
+
+/**CATEGORIA**/
+#block-views-tienda-estados-block{
+  border: 1px solid #CCC;
+  .block-title{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    background: #666666;
+    color: #fff;
+    margin-top: 0px;
+
+  }
+  .item-list ul{
+    padding-left: 0px;
+  }
+  .item-list ul li{
+    list-style: none;
+    /*background: url(../img/arrow.gif) no-repeat 12px 10px;*/
+    padding: 3px 0 3px 25px;
+    a{
+      color: @color-principal;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  
+}
+
+.col-lista-catalogo{
+  .view-taxonomy-term{
+    .titulo{
+          padding-top: 16px;
+    }
+  }
+}
+
+#block-views-tienda-categoria-block .item-list ul li.active-submenu-tienda{
+    background: #b1b1b1 !important;
+    color: #FFF !important;
+}
+#block-views-tienda-categoria-block .item-list ul li.active-submenu-tienda a{
+    color: #FFF !important;
+}
+#block-views-tienda-estados-block .item-list ul li.active-submenu-tienda{
+    background: #b1b1b1 !important;
+    color: #FFF !important;
+}
+#block-views-tienda-estados-block .item-list ul li.active-submenu-tienda a{
+    color: #FFF !important;
+}
+/**FIN CATEGORIA DE TIENDA**/
+
+/**NODO TIENDA DETALLE**/
+
+.zoomContainer{
+  border: 1px solid #d0d0d0;
+}
+.zoomContainer:hover{
+  border-bottom: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+  border-top: 0px;
+  border-left: 0px;
+}
+.zoomContainer:hover{
+  /*margin-top: -27px;*/
+}
+.zoomWindowContainer>div{
+  border: 1px solid #d0d0d0;
+}
+.node-catalogo{
+  
+  #imagezoom-thumb-wrapper{
+    margin-top: 10px;
+    
+    ul{
+      display: block;
+      overflow: hidden;
+      padding-left: 0px;
+      text-align:center;
+      
+      li.imagezoom-thumb{
+        /*float: left;*/
+        /*border: 1px solid @color-principal;*/
+        /*margin-right: 8px;*/
+        list-style: none;
+        margin-bottom: 5px;
+        display: inline-block;
+        padding: 2px;
+        img{
+          border: 1px solid #d0d0d0;
+        }
+        
+      }
+    }
+  }
+
+  .btn{
+      border-radius: 0px;
+      padding: 9px 12px;
+      background: #ffffff;
+      border: 1px solid #666666;
+      color: #000;
+    }
+    .btn:hover{
+      background: #666666;
+      color: #fff;
+    }
+
+  span#u_0_2{
+    display: none;
+  }
+
+  .field-label{
+    color: @color-principal;
+    min-width: 90px;
+  }
+  
+  .col-zoom{
+    text-align: center;
+  }
+  .nav-tabs{
+    margin-bottom: 0px;
+    li>a{
+      padding: 22px 6px 1px 12px;
+      color: #FFF;
+      background: #6f6e6e;
+    }
+  }
+  .nav-tabs>li.active>a {
+    background: #FFF !important;
+    color: #5f5d5d;
+  }
+
+  .tab-content{
+    /*background: #f3f3f3;*/
+    .tab-pane{
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+}
+
+
+@media (max-width: 1400px) {
+  .node-catalogo{
+    img.imagezoom-image{
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 993px) {
+  .node-catalogo{
+
+    ul{      
+      li.imagezoom-thumb{
+        img{
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .node-catalogo{
+    img.imagezoom-image{
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 368px) {
+  .node-catalogo{
+    ul{      
+      li.imagezoom-thumb{
+        img{
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+
+/**CATALOGO LISTA GRILLA**/
+.faybe-catalogo-lista-grilla-t1{
+  display: table;
+  margin: 0px auto;
+  .title-group{
+    color: #757474;
+    list-style-type: square;
+  }
+  .img-lista-grilla{
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    img{
+      padding: 4px;
+      border: 1px solid @color-principal;
+      margin: 0 auto;
+    }
+  }
+  .box-lista-grilla{
+    border: 1px solid @color-principal;
+    padding: 5px;
+  }
+  .titulo-lista-grilla{
+    font-size: 2rem;
+    text-align: center;
+    color: @color-principal;
+    &:hover{
+        color: @color-principal-hover;
+        text-decoration: none;
+    }
+    
+  }
+  a{
+    float: left;
+    border: 1px solid @color-principal;
+    margin-left: 6px;
+  }
+}
+
+/**FIN CATALOGO LISTA GRILLA**/
+@media (max-width: 768px) {
+  .faybe-catalogo-lista-grilla-t1{
+    .row .col{
+      margin-top: 5px;
+    }
+    .titulo-lista-grilla{
+      font-size: 1.5rem;
+    }
+  }
+  .col-lista-categoria{
+    margin-bottom: 10px;
+  }
+  .faybe-tienda-lista-grilla{
+    .col{
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+  }
+  .col-lista-categoria{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .module-title{
+    padding: 10px 28%;
+  }
+}
